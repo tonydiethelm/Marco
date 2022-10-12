@@ -19,6 +19,7 @@ destructiveMarcoButton.addEventListener("click", yellMarco);
 
 function sayMarco(){
   console.log('Marco!')
+  
 };
 
 function yellMarco(){
