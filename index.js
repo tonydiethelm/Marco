@@ -19,15 +19,23 @@ destructiveMarcoButton.addEventListener("click", yellMarco);
 
 function sayMarco(){
   console.log('Marco!')
+  marco();
   
-  fetch('/marco', {           
-    method: 'GET',
-})
-.then(result => console.log(data))
 };
 
 
 function yellMarco(){
   console.log('MARCO!')
+  for(let counter = 0; counter < 500; counter++){
+    marco();
+  }
 };
 
+
+function marco(){
+  fetch('/marco', {           
+    method: 'GET',
+})
+.then(result => result.json())
+.then(result => console.log(result))
+}

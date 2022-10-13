@@ -22,7 +22,7 @@ module.exports = {
   //mode: 'development',                    //Shouldn't need this, I'm calling "--mode development" in the package.json dev script.
   devServer: {                            //Need to configure the dev server to serve up front end stuff. 
     host: 'localhost',
-    port: 8080,
+    port: 8000,
     //match the output path.              Why?
     static: {
       directory: path.join(__dirname, 'Public'),
@@ -33,8 +33,8 @@ module.exports = {
     proxy: {
       //I need to set up the proxy server for the front end stuff to 
       //make proper get/post requests to the back end. 
-      '/marco': {target: 'http://localhost:3000/', secure: false,},
-    }
+      '/marco': {target: 'http://localhost:3000/'},
+    },
 
   },
   plugins: [htmlPlugin],                //rules for HTML Web Pack Plugin. Defined above. 
