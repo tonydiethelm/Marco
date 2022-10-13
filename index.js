@@ -20,7 +20,12 @@ destructiveMarcoButton.addEventListener("click", yellMarco);
 function sayMarco(){
   console.log('Marco!')
   
+  fetch('/marco', {           
+    method: 'GET',
+})
+.then(result => console.log(data))
 };
+
 
 function yellMarco(){
   console.log('MARCO!')
