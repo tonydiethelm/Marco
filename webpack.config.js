@@ -22,7 +22,7 @@ module.exports = {
   //mode: 'development',                    //Shouldn't need this, I'm calling "--mode development" in the package.json dev script.
   devServer: {                            //Need to configure the dev server to serve up front end stuff. 
     host: 'localhost',
-    port: 8000,
+    port: 8080,
     //match the output path.              Why?
     static: {
       directory: path.join(__dirname, 'Public'),
